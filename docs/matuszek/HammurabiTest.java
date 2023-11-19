@@ -1,9 +1,10 @@
-package hammurabi;
+package hammurabi.docs.matuszek;
 
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+import hammurabi.docs.Hammurabi;
 
 public class HammurabiTest {
     
@@ -72,6 +73,9 @@ public class HammurabiTest {
             int harvest = ham.harvest(1);
             assertTrue("Illegal harvest per acre: " + harvest, harvest > 0 && harvest <= 6);
             yield[harvest] += 1;
+
+
+
         }
         for (int j = 1; j <= 6; j++) {
             assertTrue("You never have a yield of " + j + " bushels per acre.", yield[j] > 0);
@@ -88,7 +92,7 @@ public class HammurabiTest {
             }
         }
         int percentInfestations = infestations / 100;
-        assertTrue("Number of rat infestations is about " + percentInfestations + 
+        assertTrue("Number of rat infestations is about " + percentInfestations +
                    ", not about 40%.", about(400, infestations));
     }
 
@@ -119,7 +123,7 @@ public class HammurabiTest {
         for (int j = 17; j <= 23; j++) {
             assertTrue("You never have a land cost of " + j + " bushels per acre.", cost[j] > 0);
         }
-    }
+     }
 
 }
 
